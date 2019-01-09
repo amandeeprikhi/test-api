@@ -11,7 +11,7 @@ function sendEmail(
 ) {
   const errorEmails = [];
   const successfulEmails = [];
-  const sg = require('sendgrid')('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');//This API Key needs to be generated from the SendGrid account.
+  const sg = require('sendgrid')(SENDGRID_API_KEY);//This API Key needs to be generated from the SendGrid account.
   async.parallel([
     function (callback) {
       // Add to emails
